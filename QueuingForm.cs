@@ -17,14 +17,25 @@ namespace BasicQueuingCashier
         public QueuingForm()
     {
         InitializeComponent();
-        cashier = new CashierClass();
+        //cashier = new CashierClass();
     }
 
     private void btnCashier_Click(object sender, EventArgs e)
     {
-        lblQueue.Text = cashier.CashierGeneratedNumber("P - ");
-        CashierClass.getNumberInQueue = lblQueue.Text;
-        CashierClass.CashierQueue.Enqueue(CashierClass.getNumberInQueue);
-    }
-}
+            string queueNumber = GenerateQueueNumber();
+            lblQueue.Text = queueNumber;
+
+            CashierClass.CashierQueue.Enqueue(queueNumber);
+
+            /*lblQueue.Text = cashier.CashierGeneratedNumber("P - ");
+            CashierClass.getNumberInQueue = lblQueue.Text;
+            CashierClass.CashierQueue.Enqueue(CashierClass.getNumberInQueue);*/
+        }
+
+        private string GenerateQueueNumber()
+        {
+            counter++;
+            return "P - " + counter.ToString();
+        }
+    } 
 }
