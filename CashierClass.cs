@@ -6,9 +6,19 @@ using System.Threading.Tasks;
 
 namespace BasicQueuingCashier
 {
-    class CashierClass
+    public static class CashierClass
     {
-        private int x;
+        public static Queue<string> CashierQueue = new Queue<string>();
+        public static string GetNextInQueue()
+        {
+            if (CashierQueue.Count > 0)
+            {
+                return CashierQueue.Dequeue();
+            }
+            return null;
+        }
+
+        /*private int x;
         public static string getNumberInQueue = "";
         public static Queue<string> CashierQueue;
         public CashierClass()
@@ -21,6 +31,6 @@ namespace BasicQueuingCashier
             x++;
             CashierNumber = CashierNumber + x.ToString();
             return CashierNumber;
-        }
+        }*/
     } 
 }
