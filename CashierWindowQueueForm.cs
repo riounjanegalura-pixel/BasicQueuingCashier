@@ -17,6 +17,10 @@ namespace BasicQueuingCashier
         public CashierWindowQueueForm()
         {
             InitializeComponent();
+            refreshTimer = new System.Windows.Forms.Timer();
+            refreshTimer.Interval = 1000;
+            refreshTimer.Tick += RefreshTimer_Tick; // Link the event handler.
+            refreshTimer.Start();
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
