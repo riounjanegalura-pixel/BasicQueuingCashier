@@ -43,10 +43,11 @@
             this.btnRefresh.TabIndex = 0;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnNext
             // 
-            this.btnNext.BackColor = System.Drawing.Color.Gray;
+            this.btnNext.BackColor = System.Drawing.Color.LightGray;
             this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.Location = new System.Drawing.Point(47, 100);
             this.btnNext.Name = "btnNext";
