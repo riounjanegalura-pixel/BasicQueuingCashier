@@ -44,6 +44,7 @@
             this.btnCashier.TabIndex = 0;
             this.btnCashier.Text = "Cashier";
             this.btnCashier.UseVisualStyleBackColor = false;
+            this.btnCashier.Click += new System.EventHandler(this.btnCashier_Click);
             // 
             // lblQueue
             // 
