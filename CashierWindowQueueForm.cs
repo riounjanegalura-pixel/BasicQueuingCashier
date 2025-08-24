@@ -26,6 +26,7 @@ namespace BasicQueuingCashier
         public void DisplayCashierQueue(IEnumerable CashierList)
         {
             listCashierQueue.Items.Clear();
+
             foreach (Object obj in CashierList)
             {
                 listCashierQueue.Items.Add(obj.ToString());

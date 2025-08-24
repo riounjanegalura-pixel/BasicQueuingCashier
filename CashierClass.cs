@@ -22,5 +22,5 @@ namespace BasicQueuingCashier
             CashierNumber = CashierNumber + x.ToString();
             return CashierNumber;
         }
-    }
+    } 
 }
