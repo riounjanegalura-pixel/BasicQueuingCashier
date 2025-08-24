@@ -32,6 +32,7 @@
             this.lblQueue = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnOpenQueueForm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCashier
@@ -76,12 +77,25 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "*Click to get a number";
             // 
+            // btnOpenQueueForm
+            // 
+            this.btnOpenQueueForm.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnOpenQueueForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpenQueueForm.Location = new System.Drawing.Point(413, 332);
+            this.btnOpenQueueForm.Name = "btnOpenQueueForm";
+            this.btnOpenQueueForm.Size = new System.Drawing.Size(162, 33);
+            this.btnOpenQueueForm.TabIndex = 4;
+            this.btnOpenQueueForm.Text = "See List";
+            this.btnOpenQueueForm.UseVisualStyleBackColor = false;
+            this.btnOpenQueueForm.Click += new System.EventHandler(this.btnOpenQueueForm_Click);
+            // 
             // QueuingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSlateGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnOpenQueueForm);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblQueue);
@@ -99,6 +113,7 @@
         private System.Windows.Forms.Label lblQueue;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnOpenQueueForm;
     }
 }
 

@@ -6,13 +6,9 @@ using System.Threading.Tasks;
 
 namespace BasicQueuingCashier
 {
-    public static class CashierClass
+    class CashierClass
     {
-
-        public static Queue<string> CashierQueue = new Queue<string>();
-
-
-        /*private int x;
+        private int x;
         public static string getNumberInQueue = "";
         public static Queue<string> CashierQueue;
         public CashierClass()
@@ -25,6 +21,6 @@ namespace BasicQueuingCashier
             x++;
             CashierNumber = CashierNumber + x.ToString();
             return CashierNumber;
-        }*/
+        }
     } 
 }
