@@ -13,6 +13,7 @@ namespace BasicQueuingCashier
 {
     public partial class CashierWindowQueueForm: Form
     {
+        private System.Windows.Forms.Timer refreshTimer;
         public CashierWindowQueueForm()
         {
             InitializeComponent();
@@ -31,6 +32,11 @@ namespace BasicQueuingCashier
             {
                 listCashierQueue.Items.Add(obj.ToString());
             }
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

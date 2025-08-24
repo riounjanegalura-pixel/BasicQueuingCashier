@@ -13,7 +13,6 @@ namespace BasicQueuingCashier
     public partial class QueuingForm: Form
     {
         private CashierClass cashier;
-        //private int counter = 10000;
         public QueuingForm()
     {
         InitializeComponent();
@@ -25,10 +24,6 @@ namespace BasicQueuingCashier
              lblQueue.Text = cashier.CashierGeneratedNumber("P - ");
              CashierClass.getNumberInQueue = lblQueue.Text;
              CashierClass.CashierQueue.Enqueue(CashierClass.getNumberInQueue);
-            /*string queueNumber = GenerateQueueNumber();
-            lblQueue.Text = queueNumber;
-
-            CashierClass.CashierQueue.Enqueue(queueNumber);*/
         }
 
         private void btnOpenQueueForm_Click(object sender, EventArgs e)
@@ -36,12 +31,5 @@ namespace BasicQueuingCashier
             CashierWindowQueueForm queueForm = new CashierWindowQueueForm();
             queueForm.Show();
         }
-
-        /*private string GenerateQueueNumber()
-        {
-            counter++;
-            return "P - " + counter.ToString();
-        }*/
-
     } 
 }
