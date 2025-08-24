@@ -16,6 +16,7 @@ namespace BasicQueuingCashier
         public QueuingForm()
         {
             InitializeComponent();
+            cashier = new CashierClass();
         }
 
         private void btnCashier_Click(object sender, EventArgs e)
