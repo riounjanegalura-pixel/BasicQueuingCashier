@@ -10,31 +10,35 @@ using System.Windows.Forms;
 
 namespace BasicQueuingCashier
 {
-    public partial class CustomerView : Form
+    public partial class CustomerView: Form
     {
         public CustomerView()
         {
             InitializeComponent();
+        }
 
+        private void CustomerView_Load(object sender, EventArgs e)
+        {
             UpdateQueueDisplay();
+
 
             CashierClass.OnQueueChanged += UpdateQueueDisplay;
         }
 
-        private void CustomerView_Load(object sender, EventArgs e)
+        private void CustomerView_FormClosed(object sender, FormClosedEventArgs e)
         {
             CashierClass.OnQueueChanged -= UpdateQueueDisplay;
         }
 
         private void UpdateQueueDisplay()
         {
-            if (CashierClass.CashierQueue != null && CashierClass.CashierQueue.Count > 0)
+            if (CashierClass.CashierQueue.Any())
             {
                 lblCurrentNumber.Text = CashierClass.CashierQueue.Peek();
             }
             else
             {
-                lblCurrentNumber.Text = "           ";
+                lblCurrentNumber.Text = "No customer      ";
             }
         }
     }

@@ -18,6 +18,7 @@ namespace BasicQueuingCashier
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new CashierWindowQueueForm());
             Application.Run(new QueuingForm());
+            Application.Run(new CustomerView());
         }
     }
 }

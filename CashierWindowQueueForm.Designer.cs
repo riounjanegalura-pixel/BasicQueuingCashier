@@ -32,6 +32,7 @@
             this.btnNext = new System.Windows.Forms.Button();
             this.listCashierQueue = new System.Windows.Forms.ListView();
             this.lblNowServing = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnRefresh
@@ -71,10 +72,21 @@
             // 
             this.lblNowServing.AutoSize = true;
             this.lblNowServing.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNowServing.Location = new System.Drawing.Point(42, 253);
+            this.lblNowServing.Location = new System.Drawing.Point(218, 168);
             this.lblNowServing.Name = "lblNowServing";
-            this.lblNowServing.Size = new System.Drawing.Size(0, 29);
+            this.lblNowServing.Size = new System.Drawing.Size(23, 29);
             this.lblNowServing.TabIndex = 3;
+            this.lblNowServing.Text = "*";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(42, 168);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(23, 29);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "*";
             // 
             // CashierWindowQueueForm
             // 
@@ -82,12 +94,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSlateGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblNowServing);
             this.Controls.Add(this.listCashierQueue);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnRefresh);
             this.Name = "CashierWindowQueueForm";
             this.Text = "CashierWindowQueueForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CashierWindowQueueForm_FormClosed);
+            this.Load += new System.EventHandler(this.btnRefresh_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -99,5 +114,6 @@
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.ListView listCashierQueue;
         private System.Windows.Forms.Label lblNowServing;
+        private System.Windows.Forms.Label label1;
     }
 }

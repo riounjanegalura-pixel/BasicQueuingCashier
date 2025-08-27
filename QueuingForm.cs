@@ -21,8 +21,13 @@ namespace BasicQueuingCashier
     }
 
     private void btnCashier_Click(object sender, EventArgs e)
-        { 
+        {
             string queueNumber = GenerateQueueNumber();
+            lblQueue.Text = queueNumber;
+
+            CashierClass.AddToQueue(queueNumber);
+
+            /*string queueNumber = GenerateQueueNumber();
             lblQueue.Text = queueNumber;
 
             CashierClass.CashierQueue.Enqueue(queueNumber);
