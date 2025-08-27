@@ -8,14 +8,26 @@ namespace BasicQueuingCashier
 {
     public static class CashierClass
     {
+        public static event Action OnQueueChanged;
+
         public static Queue<string> CashierQueue = new Queue<string>();
         public static string GetNextInQueue()
         {
             if (CashierQueue.Count > 0)
             {
-                return CashierQueue.Dequeue();
+                string nextNumber = CashierQueue.Dequeue();
+
+                OnQueueChanged?.Invoke();
+                return nextNumber;
             }
             return null;
+
+
+            /*if (CashierQueue.Count > 0)
+            {
+                return CashierQueue.Dequeue();
+            }
+            return null;*/
         }
 
         /*private int x;
